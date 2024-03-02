@@ -19,3 +19,15 @@ CREATE TABLE students
 
 SELECT *
 FROM students
+
+INSERT INTO students VALUES(2,'小廣','國文')
+RETURNING * ;
+
+/*指定新增欄位*/
+INSERT INTO students(name , major) VALUES('小美','公民')
+RETURNING * ;
+
+/*新增多筆*/
+INSERT INTO students(name , major) 
+VALUES('小博','英文'),('小文','數學')
+RETURNING * ;
