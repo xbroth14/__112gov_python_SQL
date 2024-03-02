@@ -21,8 +21,10 @@ DROP TABLE artists;
 
 CREATE TABLE IF NOT EXISTS city
 (
-	id SERIAL PRIMARY KEY,
+	id SERIAL ,
 	name VARCHAR(30),
-	population VARCHAR(10)
-
+	population VARCHAR(10),
+	PRIMARY KEY(id)
 );
+
+DROP TABLE city;
