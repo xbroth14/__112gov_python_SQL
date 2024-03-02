@@ -16,3 +16,13 @@ CREATE TABLE IF NOT EXISTS artists
 );
 
 DROP TABLE artists;
+
+
+
+CREATE TABLE IF NOT EXISTS city
+(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(30),
+	population VARCHAR(10)
+
+);
