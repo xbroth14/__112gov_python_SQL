@@ -27,3 +27,8 @@ FROM students ;
 SELECT name as 姓名 , major as 主修
 FROM students ;
 
+
+SELECT *
+FROM students 
+order by score desc 
+limit 3 ;
