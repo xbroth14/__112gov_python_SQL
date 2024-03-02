@@ -32,3 +32,29 @@ SELECT *
 FROM students 
 order by score desc 
 limit 3 ;
+
+
+SELECT *
+FROM students
+WHERE major = '公民'
+ORDER BY score desc
+limit 1 ;
+
+
+
+SELECT *
+FROM students
+WHERE major = '語文' and score > 60 
+ORDER BY score desc
+limit 1 ;
+
+SELECT *
+FROM students
+WHERE major IN ('語文','國文','公民') AND SCORE > 50;
+
+
+SELECT *
+FROM students
+WHERE SCORE BETWEEN  50 AND 100;
+
+
