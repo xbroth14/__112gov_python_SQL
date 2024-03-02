@@ -19,3 +19,11 @@ INSERT INTO students VALUES(5,'小白','社會','100');
 SELECT *
 FROM students;
 
+
+SELECT name , major 
+FROM students ;
+
+
+SELECT name as 姓名 , major as 主修
+FROM students ;
+
