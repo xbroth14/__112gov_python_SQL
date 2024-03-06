@@ -10,3 +10,5 @@ CREATE TABLE IF NOT EXISTS  invoices
 	, billingpostalcode    VARCHAR(200)
 	, total                FLOAT
 );
+
+SELECT  * FROM invoices  limit 100 ;
