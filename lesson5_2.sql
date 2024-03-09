@@ -39,9 +39,9 @@ VALUES(1,'Josh Doe' ,'0978142456','ASVB123@GMAIL.COM'),
 -- DELETE FROM 客戶
 -- WHERE 客戶_id = 1 ; 
 
-SELECT A.聯絡人_id,B.客戶名稱,聯絡人姓名,電話,郵件
+SELECT A.聯絡人_id,B.客戶名稱,A.聯絡人姓名,A.電話,A.郵件
 FROM 聯絡人 A
 LEFT JOIN 客戶 B
 ON A.客戶_id = B.客戶_id
-WHERE 客戶名稱 = '遠傳電信'
+WHERE B.客戶名稱 = '遠傳電信'
 
