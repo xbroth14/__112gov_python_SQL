@@ -67,11 +67,3 @@ WHERE 名稱 IN ('基隆','臺北' )
 GROUP BY 名稱 ,年份
 ORDER BY 進站總人數 DESC
 ;	
-
-
-
-select DISTINCT EXTRACT(MONTH FROM 日期 :: DATE ) AS 月份
-FROM gate_count A
-LEFT JOIN  stations B
-ON A.站點編號 =B.編號  LIMIT 10
-GROUP BY 
