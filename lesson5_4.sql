@@ -88,5 +88,29 @@ AND  日期 BETWEEN '2022-03-01' AND '2022-03-31'
 ORDER BY 日期 
 ;	
 
+/*找出台北火車站與基隆火車站2022年3月份資料，時間由小到大*/	
+SELECT 日期,進站人數,出站人數,名稱,地名,地址,YOUBIKE
+FROM gate_count A 
+LEFT JOIN  stations B 
+ON A.站點編號 =B.編號
+WHERE 名稱 IN('基隆' , '臺北')
+AND  日期 BETWEEN '2022-03-01' AND '2022-03-31'
+ORDER BY 日期 
+;	
+
+/*找出進站人數最多的錢10筆資料*/	
+SELECT 日期,進站人數,出站人數,名稱,地名,地址,YOUBIKE
+FROM gate_count A 
+LEFT JOIN  stations B 
+ON A.站點編號 =B.編號
+ORDER BY 進站人數 desc LIMIT 10
+;	
+
+
+
+
 SELECT *
 FROM stations
+
+SELECT *
+FROM gate_count
