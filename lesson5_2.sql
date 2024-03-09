@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS 聯絡人;
 DROP TABLE IF EXISTS 客戶;
 
 
@@ -8,7 +9,7 @@ CREATE TABLE IF NOT EXISTS 客戶(
 	
 );
 
-DROP TABLE IF EXISTS 聯絡人;
+
 
 CREATE TABLE IF NOT EXISTS 聯絡人
 (
@@ -35,8 +36,12 @@ VALUES(1,'Josh Doe' ,'0978142456','ASVB123@GMAIL.COM'),
       (2,'Jhone Chen' ,'097814321','Chen123@GMAIL.COM');
 
 
-DELETE FROM 客戶
-WHERE 客戶_id = 1 ; 
+-- DELETE FROM 客戶
+-- WHERE 客戶_id = 1 ; 
 
-
+SELECT A.聯絡人_id,B.客戶名稱,聯絡人姓名,電話,郵件
+FROM 聯絡人 A
+LEFT JOIN 客戶 B
+ON A.客戶_id = B.客戶_id
+WHERE 客戶名稱 = '遠傳電信'
 
