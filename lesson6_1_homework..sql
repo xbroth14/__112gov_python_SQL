@@ -1,13 +1,12 @@
 /*- 全省各站點2022年進站總人數*/
-SELECT 名稱,sum(進站人數) AS 進站總人數
+SELECT DATE_PART('year',日期) AS 年份,名稱,sum(進站人數) AS 進站總人數
 FROM gate_count A 
 LEFT JOIN  stations B 
-ON A.站點編號 =B.編號
+ON A.站點編號 = B.編號
 WHERE 日期 BETWEEN '2022-01-01' AND '2022-12-31'
-GROUP BY 名稱
-ORDER BY 進站總人數 
+GROUP BY 年份,名稱
+ORDER BY 進站總人數 DESC
 ;	
-
 
 /*- 全省各站點2022年進站總人數大於5佰萬人的站點*/
 	
